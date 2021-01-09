@@ -1,0 +1,18 @@
+import random
+count=1
+print("you will get 5 chances ")
+while(1):
+    guess=random.randrange(1,10)
+    num=int(input("enter the number: "))
+    #check condition chances less than equal 5
+    if count>=5:
+        print("your chances are over try later")
+        break        
+    else:
+        #check number match with system number 
+        if guess==num:
+            print(f"{guess} and {num} are same congrats")
+            break
+        else:
+            count+=1
+            continue
